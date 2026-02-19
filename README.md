@@ -2,6 +2,14 @@
 
 Comprehensive archive of press coverage, media appearances, and government records documenting Chris Izworski's work in artificial intelligence, 911 emergency services, severe weather policy, and Michigan public safety.
 
+## National Trade Publication — Cover Story (NENA)
+
+- **Cover Story:** ["The Unstoppable Wave of Artificial Intelligence"](https://www.thecall-digital.com/nenq/0125_issue_51/MobilePagedArticle.action?articleId=2054315#articleId2054315) — *The Call*, NENA: The 9-1-1 Association, Issue 51, April 2025
+  - Lead feature in the official publication of the National Emergency Number Association
+  - Written as Director, Saginaw County (MI) 911
+  - Examines AI's trajectory, practical PSAP applications, ethical frameworks, and a call to action for 911 directors nationwide
+  - See [chrisizworski.com/press](https://chrisizworski.com/press/) for full press archive
+
 ## Television — WNEM TV5
 
 - [AI to Answer Non-Emergency Calls in Saginaw Co.](https://www.wnem.com/2024/08/23/ai-answer-non-emergency-calls-saginaw-co/) — Aug 2024
