@@ -20,9 +20,9 @@ Comprehensive archive of press coverage, media appearances, and government recor
 - [WCMU/NPR: AI Chatbots Now Taking Non-Emergency Calls in Grand Traverse County](https://radio.wcmu.org/local-regional-news/2025-10-15/ai-chatbots-now-taking-non-emergency-calls-in-grand-traverse-county) — Oct 2025
 - [WSGW 790 AM: Saginaw County 911 to Use AI for Non-Emergency Calls](https://wsgw.com/saginaw-county-911-to-use-ai-for-non-emergency-calls/) — Aug 2024
 
-## National Trade Press — NENA
+## National Trade Press — NENA (Cover Story Author)
 
-- [The Call (NENA): "The Unstoppable Wave of Artificial Intelligence"](https://www.thecall-digital.com/nenq/0125_issue_51/MobilePagedArticle.action?articleId=2054315#articleId2054315) — Jan 2025, Issue 51 — Featured in the official publication of NENA: The 9-1-1 Association
+- [The Call (NENA) — Cover Story: "The Unstoppable Wave of Artificial Intelligence"](https://www.thecall-digital.com/nenq/0125_issue_51/MobilePagedArticle.action?articleId=2054315#articleId2054315) — **By Chris Izworski**, Director, Saginaw County (MI) 911 — April 2025, Issue 51 — Lead feature article in the official publication of NENA: The 9-1-1 Association, examining AI's disruptive impact on how emergencies are reported, assessed, and dispatched
 
 ## State Government Records
 
