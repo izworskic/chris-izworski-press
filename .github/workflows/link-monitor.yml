@@ -5,6 +5,10 @@ on:
     - cron: '0 8 * * *'   # 8am UTC = 3am ET — runs before you wake up
   workflow_dispatch:        # also lets you run it manually any time
 
+permissions:
+  issues: write
+  contents: read
+
 jobs:
   check-links:
     runs-on: ubuntu-latest
@@ -26,7 +30,7 @@ jobs:
               --location \
               --user-agent "Mozilla/5.0 (compatible; LinkMonitor/1.0)" \
               "$url")
-            if [ "$STATUS" = "200" ] || [ "$STATUS" = "301" ] || [ "$STATUS" = "302" ] || [ "$STATUS" = "403" ]; then
+            if [ "$STATUS" = "200" ] || [ "$STATUS" = "301" ] || [ "$STATUS" = "302" ] || [ "$STATUS" = "403" ] || [ "$STATUS" = "999" ]; then
               # 403 = page exists but blocked (LinkedIn etc) — not a real failure
               REPORT="${REPORT}✅ ${STATUS} — ${label}\n"
             else
