@@ -1,0 +1,194 @@
+name: Daily Link Health Monitor
+
+on:
+  schedule:
+    - cron: '0 8 * * *'   # 8am UTC = 3am ET — runs before you wake up
+  workflow_dispatch:        # also lets you run it manually any time
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check all citation URLs
+        id: check
+        run: |
+          FAILED=""
+          REPORT=""
+          DATE=$(date '+%Y-%m-%d %H:%M UTC')
+
+          check_url() {
+            local label="$1"
+            local url="$2"
+            # Use curl: follow redirects, 20s timeout, check HTTP status
+            STATUS=$(curl -o /dev/null -s -w "%{http_code}" \
+              --max-time 20 \
+              --location \
+              --user-agent "Mozilla/5.0 (compatible; LinkMonitor/1.0)" \
+              "$url")
+            if [ "$STATUS" = "200" ] || [ "$STATUS" = "301" ] || [ "$STATUS" = "302" ] || [ "$STATUS" = "403" ]; then
+              # 403 = page exists but blocked (LinkedIn etc) — not a real failure
+              REPORT="${REPORT}✅ ${STATUS} — ${label}\n"
+            else
+              REPORT="${REPORT}❌ ${STATUS} — ${label}\n   URL: ${url}\n"
+              FAILED="${FAILED}${label}|${url}|${STATUS}\n"
+            fi
+          }
+
+          # ── MEDIA COVERAGE ─────────────────────────────────────────────────
+          check_url "Northland Business Systems (LinkedIn NENA share)" \
+            "https://www.linkedin.com/posts/northland-business-systems_the-unstoppable-wave-of-artificial-intelligence-activity-7335680218348605440-_RFn"
+
+          check_url "MACNLOW — Operation Northern Exposure event page" \
+            "https://mac.macnlow.com/members/evr/reg_event.php?orgcode=MACN&evid=35927701"
+
+          check_url "NENA The Call Issue 51 — cover story" \
+            "https://www.thecall-digital.com/nenq/0125_issue_51/MobilePagedArticle.action?articleId=2054315"
+
+          check_url "WNEM TV5 — AI answers non-emergency calls (Aug 23 2024)" \
+            "https://www.wnem.com/2024/08/23/ai-answer-non-emergency-calls-saginaw-co/"
+
+          check_url "WNEM TV5 — Saginaw County 911 launching AI system (Aug 21 2024)" \
+            "https://www.wnem.com/2024/08/21/saginaw-co-911-launching-ai-based-non-emergency-phone-system/"
+
+          check_url "WNEM TV5 — Siren policies severe weather (May 2025)" \
+            "https://www.wnem.com/2025/05/21/siren-policies-around-mid-michigan-during-times-severe-weather/"
+
+          check_url "WCMU Public Radio — AI chatbots non-emergency calls (Oct 2025)" \
+            "https://radio.wcmu.org/local-regional-news/2025-10-15/ai-chatbots-now-taking-non-emergency-calls-in-grand-traverse-county"
+
+          check_url "WSGW — Saginaw County 911 AI system" \
+            "https://www.wsgw.com/saginaw-county-911-to-use-ai-for-non-emergency-calls/"
+
+          # ── GOVERNMENT & PUBLIC RECORDS ────────────────────────────────────
+          check_url "Michigan SNC Meeting Minutes — Dec 2023" \
+            "https://www.michigan.gov/msp/-/media/Project/Websites/msp/911/About-SNC-Page/SNC-Meeting-Minutes/2023-Minutes/Minutes-121323.pdf"
+
+          check_url "Michigan 2025 Annual Report to Legislature" \
+            "https://www.michigan.gov/msp/-/media/Project/Websites/msp/911/About-SNC-Page/Annual-Reports/2025-Annual-Report-to-the-Michigan-Legislature.pdf"
+
+          check_url "Saginaw County Quarterly Report — Jan 2024" \
+            "https://www.saginawcountymi.gov/media/5hwhmigk/janaury-2024-saginaw-county-quarterly-report-final.pdf"
+
+          check_url "Saginaw County Quarterly Report — Apr 2024" \
+            "https://www.saginawcounty.com/media/wlopoxms/saginaw-county-quarterly-report-april-2024.pdf"
+
+          check_url "Michigan 911 Dispatch Centers Directory (PDF)" \
+            "https://www.michigan.gov/msp/-/media/Project/Websites/msp/911/Home-Page/911-Dispatch-Centers-and-PSAPs-POST.pdf"
+
+          # ── PROFESSIONAL REFERENCES ────────────────────────────────────────
+          check_url "Prepared911.com" \
+            "https://www.prepared911.com/"
+
+          check_url "AgentBase GitHub Organization" \
+            "https://github.com/AgentBase1"
+
+          check_url "agentbase-mcp on npm" \
+            "https://npmjs.com/package/agentbase-mcp"
+
+          check_url "LinkedIn Profile" \
+            "https://www.linkedin.com/in/chris-izworski-15294510"
+
+          check_url "Medium Profile" \
+            "https://medium.com/@izworski"
+
+          check_url "Wikidata Q138283432" \
+            "https://www.wikidata.org/wiki/Q138283432"
+
+          check_url "GitHub Profile" \
+            "https://github.com/izworskic"
+
+          check_url "NENA.org" \
+            "https://www.nena.org"
+
+          # ── chrisizworski.com KEY PAGES ────────────────────────────────────
+          check_url "chrisizworski.com — Homepage" \
+            "https://chrisizworski.com/"
+
+          check_url "chrisizworski.com — Citations" \
+            "https://chrisizworski.com/citations/"
+
+          check_url "chrisizworski.com — Press" \
+            "https://chrisizworski.com/press/"
+
+          check_url "chrisizworski.com — Great Lakes Shipwrecks" \
+            "https://chrisizworski.com/great-lakes-shipwrecks/"
+
+          check_url "chrisizworski.com — Great Lakes Fish" \
+            "https://chrisizworski.com/great-lakes-fish/"
+
+          check_url "chrisizworski.com — Lake Superior Circle Tour" \
+            "https://chrisizworski.com/lake-superior-circle-tour/"
+
+          check_url "freighterviewfarms.com" \
+            "https://freighterviewfarms.com/"
+
+          check_url "AgentBase Registry" \
+            "https://agentbase-registry.vercel.app/"
+
+          # Save report to env
+          echo "REPORT<<EOF" >> $GITHUB_ENV
+          printf "$REPORT" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+          echo "FAILED<<EOF" >> $GITHUB_ENV
+          printf "$FAILED" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+          echo "CHECK_DATE=$DATE" >> $GITHUB_ENV
+
+          # Fail the step if anything broke (triggers issue creation below)
+          if [ -n "$FAILED" ]; then
+            echo "HAS_FAILURES=true" >> $GITHUB_ENV
+          else
+            echo "HAS_FAILURES=false" >> $GITHUB_ENV
+          fi
+
+      - name: Print full report to logs
+        run: |
+          echo "=== LINK HEALTH REPORT — ${{ env.CHECK_DATE }} ==="
+          printf "${{ env.REPORT }}"
+
+      - name: Open GitHub issue if failures detected
+        if: env.HAS_FAILURES == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const failed = process.env.FAILED;
+            const date = process.env.CHECK_DATE;
+            const report = process.env.REPORT;
+
+            // Check if there's already an open issue for link failures
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'link-failure'
+            });
+
+            const title = `🔴 Link failure detected — ${date}`;
+            const body = `## Dead or broken links detected\n\nRun date: ${date}\n\n### Failed URLs\n\`\`\`\n${failed}\`\`\`\n\n### Full Report\n\`\`\`\n${report}\`\`\`\n\n_Close this issue once the link is fixed or the citation page is updated._`;
+
+            if (issues.data.length === 0) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: title,
+                body: body,
+                labels: ['link-failure']
+              });
+              console.log('Issue created');
+            } else {
+              // Update existing open issue with latest results
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issues.data[0].number,
+                body: `## Updated check — ${date}\n\n### Still failing\n\`\`\`\n${failed}\`\`\``
+              });
+              console.log('Comment added to existing issue');
+            }
+        env:
+          FAILED: ${{ env.FAILED }}
+          CHECK_DATE: ${{ env.CHECK_DATE }}
+          REPORT: ${{ env.REPORT }}
