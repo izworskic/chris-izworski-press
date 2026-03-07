@@ -81,7 +81,10 @@ jobs:
             "https://www.michigan.gov/msp/-/media/Project/Websites/msp/911/Home-Page/911-Dispatch-Centers-and-PSAPs-POST.pdf"
 
           # ── PROFESSIONAL REFERENCES ────────────────────────────────────────
-          check_url "Prepared911.com" \
+          check_url "Bay County Employee Phone Directory (2017 PDF)" \
+    "https://www.baycountymi.gov/Docs/Clerk/2017%20Phone%20Directory.pdf"
+
+  check_url "Prepared911.com" \
             "https://www.prepared911.com/"
 
           check_url "AgentBase GitHub Organization" \
