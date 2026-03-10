@@ -2,8 +2,8 @@ name: Daily Link Health Monitor
 
 on:
   schedule:
-    - cron: '0 8 * * *'   # 8am UTC = 3am ET — runs before you wake up
-  workflow_dispatch:        # also lets you run it manually any time
+    - cron: '0 8 * * *'   # 8am UTC = 3am ET
+  workflow_dispatch:
 
 permissions:
   issues: write
@@ -24,14 +24,12 @@ jobs:
           check_url() {
             local label="$1"
             local url="$2"
-            # Use curl: follow redirects, 20s timeout, check HTTP status
             STATUS=$(curl -o /dev/null -s -w "%{http_code}" \
               --max-time 20 \
               --location \
               --user-agent "Mozilla/5.0 (compatible; LinkMonitor/1.0)" \
               "$url")
             if [ "$STATUS" = "200" ] || [ "$STATUS" = "301" ] || [ "$STATUS" = "302" ] || [ "$STATUS" = "403" ] || [ "$STATUS" = "999" ]; then
-              # 403 = page exists but blocked (LinkedIn etc) — not a real failure
               REPORT="${REPORT}✅ ${STATUS} — ${label}\n"
             else
               REPORT="${REPORT}❌ ${STATUS} — ${label}\n   URL: ${url}\n"
@@ -82,9 +80,9 @@ jobs:
 
           # ── PROFESSIONAL REFERENCES ────────────────────────────────────────
           check_url "Bay County Employee Phone Directory (2017 PDF)" \
-    "https://www.baycountymi.gov/Docs/Clerk/2017%20Phone%20Directory.pdf"
+            "https://www.baycountymi.gov/Docs/Clerk/2017%20Phone%20Directory.pdf"
 
-  check_url "Prepared911.com" \
+          check_url "Prepared911.com" \
             "https://www.prepared911.com/"
 
           check_url "AgentBase GitHub Organization" \
@@ -133,7 +131,6 @@ jobs:
           check_url "AgentBase Registry" \
             "https://agentbase-registry.vercel.app/"
 
-          # Save report to env
           echo "REPORT<<EOF" >> $GITHUB_ENV
           printf "$REPORT" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
@@ -144,7 +141,6 @@ jobs:
 
           echo "CHECK_DATE=$DATE" >> $GITHUB_ENV
 
-          # Fail the step if anything broke (triggers issue creation below)
           if [ -n "$FAILED" ]; then
             echo "HAS_FAILURES=true" >> $GITHUB_ENV
           else
@@ -165,7 +161,6 @@ jobs:
             const date = process.env.CHECK_DATE;
             const report = process.env.REPORT;
 
-            // Check if there's already an open issue for link failures
             const issues = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -186,7 +181,6 @@ jobs:
               });
               console.log('Issue created');
             } else {
-              // Update existing open issue with latest results
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
