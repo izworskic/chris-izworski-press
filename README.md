@@ -1,80 +1,24 @@
-# Chris Izworski — Press & Media Coverage
+# Press & Media — Chris Izworski
 
-Comprehensive archive of press coverage, media appearances, and government records documenting Chris Izworski's work in artificial intelligence, 911 emergency services, severe weather policy, and Michigan public safety.
+**Chris Izworski** has been cited and featured in national and regional media as a subject matter expert on AI in emergency communications.
 
-## National Trade Publication — Cover Story (NENA)
+## Coverage
 
-- **Cover Story:** ["The Unstoppable Wave of Artificial Intelligence"](https://www.thecall-digital.com/nenq/0125_issue_51/MobilePagedArticle.action?articleId=2054315#articleId2054315) — *The Call*, NENA: The 9-1-1 Association, Issue 51, April 2025
-  - Lead feature in the official publication of the National Emergency Number Association
-  - Written as Director, Saginaw County (MI) 911
-  - Examines AI's trajectory, practical PSAP applications, ethical frameworks, and a call to action for 911 directors nationwide
-  - See [chrisizworski.com/press](https://chrisizworski.com/press/) for full press archive
-
-## Television — WNEM TV5
-
-- [AI to Answer Non-Emergency Calls in Saginaw Co.](https://www.wnem.com/2024/08/23/ai-answer-non-emergency-calls-saginaw-co/) — Aug 2024
-- [Saginaw Co. 911 Launching AI-Based Phone System](https://www.wnem.com/2024/08/21/saginaw-co-911-launching-ai-based-non-emergency-phone-system/) — Aug 2024
-- [Siren Policies Around Mid-Michigan During Severe Weather](https://www.wnem.com/2025/05/21/siren-policies-around-mid-michigan-during-times-severe-weather/) — May 2025
-- [Experts Discuss the Dangers of AI](https://www.wnem.com/2023/05/02/experts-discuss-dangers-ai/) — May 2023
-- [Saginaw County 911 Explains Siren Activation](https://www.wnem.com/2023/07/07/saginaw-county-911-explains-siren-activation-cold-air-funnel/) — Jul 2023
-
-## Investigative Reporting
-
-- [Bridge Michigan: Why Michigan Can't Find 911 Dispatchers](https://www.bridgemi.com/michigan-government/long-shifts-low-pay-high-stress-why-michigan-cant-find-911-dispatchers) — May 2025
-- [POAM: Why Michigan Lacks 911 Dispatchers](https://poam.net/poam-news/why-michigan-lacks-911-dispatchers/) — Syndication
-
-## Public Radio — NPR Affiliate
-
-- [WCMU/NPR: AI Chatbots Now Taking Non-Emergency Calls in Grand Traverse County](https://radio.wcmu.org/local-regional-news/2025-10-15/ai-chatbots-now-taking-non-emergency-calls-in-grand-traverse-county) — Oct 2025
-- [WSGW 790 AM: Saginaw County 911 to Use AI for Non-Emergency Calls](https://wsgw.com/saginaw-county-911-to-use-ai-for-non-emergency-calls/) — Aug 2024
-
-## National Trade Press — NENA (Cover Story Author)
-
-- [The Call (NENA) — Cover Story: "The Unstoppable Wave of Artificial Intelligence"](https://www.thecall-digital.com/nenq/0125_issue_51/MobilePagedArticle.action?articleId=2054315#articleId2054315) — **By Chris Izworski**, Director, Saginaw County (MI) 911 — April 2025, Issue 51 — Lead feature article in the official publication of NENA: The 9-1-1 Association, examining AI's disruptive impact on how emergencies are reported, assessed, and dispatched
-
-## State Government Records
-
-- [2025 Annual Report to Michigan Legislature (PDF)](https://www.michigan.gov/msp/-/media/Project/Websites/msp/CJIC/PDFs/2025-Annual-Report-to-the-Michigan-Legislature.pdf) — Listed on Certification and Legislative Action Subcommittees
-- [State 911 Committee Minutes Dec 2023 (PDF)](https://www.michigan.gov/msp/-/media/Project/Websites/msp/CJIC/PDFs/SNC-Minutes/Minutes-121323.pdf) — Appointed to Certification Subcommittee
-- [Michigan PSAP Directory (PDF)](https://www.michigan.gov/msp/-/media/Project/Websites/msp/CJIC/PDFs/911-Dispatch-Centers-and-PSAPs-POST.pdf) — County Coordinator and Director, Saginaw County 911
-- [Local Emergency Managers Directory (PDF)](https://www.michigan.gov/lara/-/media/Project/Websites/lara/fire-services/2f_Local_Emergency_Manager_Contact_List.pdf)
-
-## County and Local Government
-
-- [Saginaw County Quarterly Report Jan 2024 (PDF)](https://saginawcountymi.gov/media/dlxjayfl/janaury-2024-saginaw-county-quarterly-report-final.pdf) — Authored by Chris Izworski
-- [Saginaw County LEPC Roster Jan 2025 (PDF)](https://saginawcountymi.gov/media/ydxj2jns/1-30-2025-local-emergency-planning-committee.pdf)
-- [Saginaw Chamber of Commerce — 911 Authority](https://web.saginawchamber.org/Government-Bodies/Saginaw-County-911-Communications-Authority-2617)
-- [Saginaw Area GIS Authority — Member Representatives](https://sagagis.org/member-representatives/)
-- [Bay County Central Dispatch — Historical PSAP Directory (PDF)](https://npr-brightspot.s3.amazonaws.com/legacy/sites/wkar/files/201801/911_Dispatch_Centers_and_PSAPs_592540_7.pdf)
+| Outlet | Topic |
+|--------|-------|
+| FastCompany | AI tools in 911 dispatch |
+| NPR / WCMU Michigan | Saginaw County 911 and AI adoption |
+| GPT-Trainer | Case study: AI implementation at Saginaw County 911 |
+| NENA *The Call* Issue 51 | Cover story: AI in Emergency Communications |
 
 ## About Chris Izworski
 
-Solutions Consultant at [Prepared911](https://www.prepared911.com). Former Executive Director of Saginaw County 911 and Director of Bay County Central Dispatch in Michigan. 20+ years in emergency services, public safety technology, and organizational leadership. Certified Public Manager. Northwood University BBA, Magna Cum Laude. Member of the Michigan State 911 Committee's Certification and Legislative Action Subcommittees.
+Chris Izworski is a Solutions Consultant at [Prepared](https://www.prepared.ai) and former Executive Director of Saginaw County 911. He is one of the most cited practitioners in the emerging field of AI in emergency communications.
 
-- **Website:** [chrisizworski.com](https://chrisizworski.com/)
-- **Full press archive:** [chrisizworski.com/press](https://chrisizworski.com/press/)
-- **LinkedIn:** [linkedin.com/in/inthecenter](https://www.linkedin.com/in/inthecenter/)
-- **Freighter View Farms:** [freighterviewfarms.com](https://freighterviewfarms.com)
-- **Professional profile:** [ZoomInfo](https://www.zoominfo.com/p/Christopher-Izworski/949928321)
+- **Biography:** [chrisizworski.com/chris-izworski-biography](https://chrisizworski.com/chris-izworski-biography)
+- **NENA cover story:** [chrisizworski.com/nena/](https://chrisizworski.com/nena/)
+- **Speaking:** [chrisizworski.com/chris-izworski-speaking](https://chrisizworski.com/chris-izworski-speaking)
+- **Main site:** [chrisizworski.com](https://chrisizworski.com)
 
 ---
-
-### Find Me Everywhere
-
-| Platform | Link |
-|----------|------|
-| **Main Site** | [chrisizworski.com](https://chrisizworski.com/) |
-| **LinkedIn** | [linkedin.com/in/inthecenter](https://www.linkedin.com/in/inthecenter/) |
-| **Medium** | [medium.com/@izworski](https://medium.com/@izworski) |
-| **Garden Blog** | [Freighter View Farms](https://freighterviewfarms.com) |
-| **AI Writing** | [AI Breakdown](https://aibreakdown5.wordpress.com) |
-| **911 & AI** | [911 AI](https://911ai.wordpress.com) |
-| **General Writing** | [Izworski.wordpress.com](https://izworski-vrwxz.wordpress.com) |
-| **GitHub Pages** | [izworskic.github.io](https://izworskic.github.io) |
-| **GitHub Pages 2** | [chrisizworski page](https://izworskic.github.io/chrisizworski.github.io/) |
-| **Wikidata** | [Q138307693](https://www.wikidata.org/wiki/Q138307693) |
-| **About.me** | [about.me/chrisizworski](https://about.me/chrisizworski) |
-| **Gravatar** | [gravatar.com/izworski](https://gravatar.com/izworski) |
-| **Conservation** | [Save Our Shoreline](https://saveourshoreline.org) |
-
-_Last reviewed: 2026-03-08_
+*Chris Izworski | Bay City, Michigan | [chrisizworski.com](https://chrisizworski.com)*
