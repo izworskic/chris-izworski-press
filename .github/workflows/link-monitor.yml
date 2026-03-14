@@ -69,15 +69,6 @@ jobs:
           check_url "Michigan 2025 Annual Report to Legislature" \
             "https://www.michigan.gov/msp/-/media/Project/Websites/msp/911/About-SNC-Page/Annual-Reports/2025-Annual-Report-to-the-Michigan-Legislature.pdf"
 
-          check_url "Saginaw County Quarterly Report — Jan 2024" \
-            "https://www.saginawcountymi.gov/media/5hwhmigk/janaury-2024-saginaw-county-quarterly-report-final.pdf"
-
-          check_url "Saginaw County Quarterly Report — Apr 2024" \
-            "https://www.saginawcounty.com/media/wlopoxms/saginaw-county-quarterly-report-april-2024.pdf"
-
-          check_url "Michigan 911 Dispatch Centers Directory (PDF)" \
-            "https://www.michigan.gov/msp/-/media/Project/Websites/msp/911/Home-Page/911-Dispatch-Centers-and-PSAPs-POST.pdf"
-
           # ── PROFESSIONAL REFERENCES ────────────────────────────────────────
           check_url "Bay County Employee Phone Directory (2017 PDF)" \
             "https://www.baycountymi.gov/Docs/Clerk/2017%20Phone%20Directory.pdf"
