@@ -28,7 +28,7 @@ jobs:
               --max-time 20 \
               --location \
               --user-agent "Mozilla/5.0 (compatible; LinkMonitor/1.0)" \
-              "$url")
+              "$url" 2>/dev/null) || STATUS="TIMEOUT"
             if [ "$STATUS" = "200" ] || [ "$STATUS" = "301" ] || [ "$STATUS" = "302" ] || [ "$STATUS" = "403" ] || [ "$STATUS" = "999" ]; then
               REPORT="${REPORT}✅ ${STATUS} — ${label}\n"
             else
@@ -131,21 +131,20 @@ jobs:
           check_url "AgentBase Registry" \
             "https://agentbase-registry.vercel.app/"
 
-          echo "REPORT<<EOF" >> $GITHUB_ENV
-          printf "$REPORT" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-
-          echo "FAILED<<EOF" >> $GITHUB_ENV
-          printf "$FAILED" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-
-          echo "CHECK_DATE=$DATE" >> $GITHUB_ENV
-
-          if [ -n "$FAILED" ]; then
-            echo "HAS_FAILURES=true" >> $GITHUB_ENV
-          else
-            echo "HAS_FAILURES=false" >> $GITHUB_ENV
-          fi
+          {
+            echo "REPORT<<EOF"
+            printf "$REPORT"
+            echo "EOF"
+            echo "FAILED<<EOF"
+            printf "$FAILED"
+            echo "EOF"
+            echo "CHECK_DATE=$DATE"
+            if [ -n "$FAILED" ]; then
+              echo "HAS_FAILURES=true"
+            else
+              echo "HAS_FAILURES=false"
+            fi
+          } >> "$GITHUB_ENV"
 
       - name: Print full report to logs
         run: |
