@@ -123,12 +123,12 @@ jobs:
             "https://agentbase-registry.vercel.app/"
 
           {
-            echo "REPORT<<EOF"
-            printf "$REPORT"
-            echo "EOF"
-            echo "FAILED<<EOF"
-            printf "$FAILED"
-            echo "EOF"
+            echo "REPORT<<LINKMON_EOF"
+            printf '%b' "$REPORT"
+            echo "LINKMON_EOF"
+            echo "FAILED<<LINKMON_EOF"
+            printf '%b' "$FAILED"
+            echo "LINKMON_EOF"
             echo "CHECK_DATE=$DATE"
             if [ -n "$FAILED" ]; then
               echo "HAS_FAILURES=true"
@@ -140,7 +140,7 @@ jobs:
       - name: Print full report to logs
         run: |
           echo "=== LINK HEALTH REPORT — ${{ env.CHECK_DATE }} ==="
-          printf "${{ env.REPORT }}"
+          printf '%b' "${{ env.REPORT }}"
 
       - name: Open GitHub issue if failures detected
         if: env.HAS_FAILURES == 'true'
