@@ -70,8 +70,11 @@ jobs:
             "https://www.michigan.gov/msp/-/media/Project/Websites/msp/911/About-SNC-Page/Annual-Reports/2025-Annual-Report-to-the-Michigan-Legislature.pdf"
 
           # ── PROFESSIONAL REFERENCES ────────────────────────────────────────
-          check_url "Bay County Employee Phone Directory (2017 PDF)" \
-            "https://www.baycountymi.gov/Docs/Clerk/2017%20Phone%20Directory.pdf"
+          check_url "APCO International — 2022 ECC Award Winners" \
+            "https://www.apcointl.org/membership/awards-recognition/ecc-awards/2022-ecc-award-winners/"
+
+          check_url "Michigan APCO — Past Award Winners (2021 Director)" \
+            "https://www.miapco.org/past-award-winners.html"
 
           check_url "Prepared911.com" \
             "https://www.prepared911.com/"
